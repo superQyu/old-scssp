@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# 自定义信息
+echo -e "\033[32m --------- Verification commit-msg  --------- \033[0m"
+
+npx --no-install commitlint --edit "$1"

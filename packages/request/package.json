@@ -1,0 +1,22 @@
+{
+  "name": "@spms/web-request",
+  "version": "1.0.0",
+  "description": "web server",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint \"**/*.ts\"",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+  },
+  "author": "",
+  "dependencies": {
+    "a": "^3.0.1",
+    "antd": "^5.6.2",
+    "eslint": "^7.32.0",
+    "eslint-config-custom": "workspace:*",
+    "tsconfig": "workspace:*",
+    "typescript": "^4.9.4",
+    "utils": "workspace:*"
+  }
+}

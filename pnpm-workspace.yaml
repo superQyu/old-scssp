@@ -1,0 +1,7 @@
+packages:
+  - apps/* #业务项目
+  - packages/* #其他功能 函数/组件/工具
+  - uis/* #UI 组件库
+  - configs/* #配置项
+  - templates/* #模板项目
+  - scripts/* #其他脚本

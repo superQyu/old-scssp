@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/src/assets/logo/64-64.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DCIC</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      .loading {
+        position: relative;
+        min-height: 10rem;
+        z-index: 99998;
+        background-color: rgba(255, 255, 255, 0.05);
+        margin-top: 50vh;
+        transform: translateY(-50%);
+      }
+      .loading .loading-inner {
+        position: absolute;
+        top: calc(50% - 1.25em);
+        left: calc(50% - 1.25em);
+        width: 2.5em;
+        height: 2.5em;
+        transform: rotate(165deg);
+      }
+      .loading .loading-inner:before,
+      .loading .loading-inner:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: block;
+        width: 0.5em;
+        height: 0.5em;
+        border-radius: 0.25em;
+        transform: translate(-50%, -50%);
+      }
+
+      .loading .loading-inner:before {
+        animation: before 2s infinite;
+      }
+
+      .loading .loading-inner:after {
+        animation: after 2s infinite;
+      }
+      .loading span {
+        font-family: 'Open Sans';
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 19px;
+        text-align: center;
+        z-index: 999999999;
+        opacity: 1;
+        line-height: 30px;
+        position: absolute;
+        top: calc(50% + 2.5em);
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      @keyframes before {
+        0% {
+          width: 0.5em;
+          box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+        }
+
+        35% {
+          width: 2.5em;
+          box-shadow: 0 -0.5em rgba(225, 20, 98, 0.75), 0 0.5em rgba(111, 202, 220, 0.75);
+        }
+
+        70% {
+          width: 0.5em;
+          box-shadow: -1em -0.5em rgba(225, 20, 98, 0.75), 1em 0.5em rgba(111, 202, 220, 0.75);
+        }
+
+        100% {
+          box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+        }
+      }
+
+      @keyframes after {
+        0% {
+          height: 0.5em;
+          box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+        }
+
+        35% {
+          height: 2.5em;
+          box-shadow: 0.5em 0 rgba(61, 184, 143, 0.75), -0.5em 0 rgba(233, 169, 32, 0.75);
+        }
+
+        70% {
+          height: 0.5em;
+          box-shadow: 0.5em -1em rgba(61, 184, 143, 0.75), -0.5em 1em rgba(233, 169, 32, 0.75);
+        }
+
+        100% {
+          box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div class="loading">
+        <div class="loading-inner"></div>
+        <span>正在加载系统资源，请耐心等待...</span>
+      </div>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

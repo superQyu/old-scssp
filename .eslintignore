@@ -1,0 +1,9 @@
+node_modules/
+target/
+.next/
+.git/
+.husky/
+build/
+dist/
+
+crates/*/tests/**

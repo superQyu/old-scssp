@@ -1,0 +1,57 @@
+#loginContainer {
+  background-color: #f0f2f5;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+
+  background-image: url(https://gw.alipayobjects.com/zos/rmsportal/FfdJeJRQWjEeGTpqgBKj.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .captchaLoading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .captchaInner {
+      cursor: pointer;
+      margin-bottom: 24px;
+      img {
+        height: 40px;
+      }
+    }
+  }
+  .formOther {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .formOtherTips {
+      color: #ccc;
+      font-weight: normal;
+      font-size: 14px;
+    }
+    .otherItem {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 40px;
+      width: 40px;
+      border: 1px solid #d4d8dd;
+      border-radius: 50%;
+    }
+  }
+
+  .pageTitle {
+    height: 44px;
+  }
+  :global(.ant-pro-form-login-page-desc) {
+    margin-block-start: 18px;
+    margin-block-end: 30px;
+  }
+}
